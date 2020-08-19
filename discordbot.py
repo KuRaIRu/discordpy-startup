@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='fd/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -14,8 +14,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def command(ctx):
+    await ctx.send('このコマンドは私が作られて一番最初にできた物です')
 
 
 bot.run(token)
